@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     lazy var reachability: NetworkReachabilityManager? = {
-        return NetworkReachabilityManager(host: "https://app.u17.com")
+        return NetworkReachabilityManager(host: "https://baidu.com")
     }()
     
     var orientation: UIInterfaceOrientationMask = .portrait
@@ -48,7 +48,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         reachability?.listener = { status in
             switch status {
             case .reachable(.ethernetOrWiFi):
-                UNoticeBar(config: UNoticeBarConfig(title: "主人,检测到您正在使用WIFI移动数据")).show(duration: 2)
+                UNoticeBar(config: UNoticeBarConfig(title: "主人,检测到您正在使用WIFI数据")).show(duration: 2)
             default: break
             }
         }
