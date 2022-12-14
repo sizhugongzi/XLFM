@@ -12,7 +12,7 @@ extension SwiftMessages.Config {
     var windowLevel: UIWindow.Level? {
         switch presentationContext {
         case .window(let level): return level
-        case .windowScene(_, let level): return level
+        //case .windowScene(_, let level): return level
         default: return nil
         }
     }
@@ -20,7 +20,7 @@ extension SwiftMessages.Config {
     @available (iOS 13.0, *)
     var windowScene: UIWindowScene? {
         switch presentationContext {
-        case .windowScene(let scene, _): return scene
+        //case .windowScene(let scene, _): return scene
         default:
             #if SWIFTMESSAGES_APP_EXTENSIONS
             return nil

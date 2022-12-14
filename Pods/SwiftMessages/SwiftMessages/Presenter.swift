@@ -311,9 +311,9 @@ class Presenter: NSObject {
         case .window:
             let viewController = newWindowViewController()
             return .viewController(Weak(value: viewController))
-        case .windowScene:
-            let viewController = newWindowViewController()
-            return .viewController(Weak(value: viewController))
+//        case .windowScene:
+//            let viewController = newWindowViewController()
+//            return .viewController(Weak(value: viewController))
         case .viewController(let viewController):
             let viewController = viewController.sm_selectPresentationContextBottomUp(config)
             return .viewController(Weak(value: viewController))
